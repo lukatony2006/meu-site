@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abrir no Minecraft</title>
   <style>
     body {
@@ -10,39 +11,50 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 30px 20px;
       height: 100vh;
-      background: #1e1e1e;
-      color: white;
+      background: #121212;
+      color: #fff;
+      text-align: center;
     }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
     button {
-      padding: 12px 24px;
-      font-size: 16px;
+      padding: 18px 32px;
+      font-size: 1.4rem;
       border: none;
       background-color: #00c853;
       color: white;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
+      width: 100%;
+      max-width: 400px;
     }
+
     button:hover {
       background-color: #00e676;
     }
   </style>
 </head>
 <body>
-  <h1>Abrir servidor no Minecraft</h1>
-  <p>Clique no botão abaixo para adicionar o servidor automaticamente:</p>
+  <h1>Entrar no Servidor</h1>
+  <p>Toque no botão abaixo para abrir o Minecraft com o servidor:</p>
   <button onclick="abrirMinecraft()">Abrir no Minecraft</button>
 
   <script>
     function abrirMinecraft() {
-      // Altere os dados abaixo para o nome e IP/porta do seu servidor
       const nome = 'SerpMoon';
       const ip = 'serppokemon.blazebr.com:26005';
-
-      // Monta o link
       const link = `minecraft://?addExternalServer=${nome}|${ip}`;
-
-      // Redireciona
       window.location.href = link;
     }
   </script>
