@@ -1,88 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone Yu-Gi-Oh! - Semana do zero ao programador</title>
-    <link rel="stylesheet" href="src/css/fonts.css">
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/style.css">
+  <meta charset="UTF-8">
+  <title>Abrir no Minecraft</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #1e1e1e;
+      color: white;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      background-color: #00c853;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00e676;
+    }
+  </style>
 </head>
-
 <body>
-    <header class="cabecalho">
-        <h1 class="titulo">Clone Yu-Gi-Oh!</h1>
-    </header>
-    <main class="slider">
-        <button class="btn-seta btn-voltar" id="btn-voltar">
-            <img src="src/image/seta.png" alt="seta voltar">
-        </button>
+  <h1>Abrir servidor no Minecraft</h1>
+  <p>Clique no botão abaixo para adicionar o servidor automaticamente:</p>
+  <button onclick="abrirMinecraft()">Abrir no Minecraft</button>
 
-        <ul class="lista-personagens">
-            <li class="cartao fundo-1 selecionado">
-                <div class="carta-virada"></div>
-                <h2 class="nome">Cosmo Sentinel, O Guardião Galático</h2>
+  <script>
+    function abrirMinecraft() {
+      // Altere os dados abaixo para o nome e IP/porta do seu servidor
+      const nome = 'SerpMoon';
+      const ip = 'serppokemon.blazebr.com:26005';
 
-                <div class="nivel-carta">
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                </div>
+      // Monta o link
+      const link = `minecraft://?addExternalServer=${nome}|${ip}`;
 
-                <img src="src/image/cosmos-sentinel.png" alt="Cosmos Sentinel" class="imagem-carta">
-
-                <div class="informacoes">
-                    <p class="descricao">
-                        Este imponente guerreiro cibernético é a personificação da harmonia entre tecnologia avançada e
-                        energia cósmica. Empunhando o Cetro Estelar, Cosmos Sentinel pode manipular o espaço-tempo,
-                        anulando ataques e fortalecendo aliados.
-                    </p>
-                    <div class="informacoes-ataque">
-                        <span>ATK/ 2800</span>
-                        <span>DEF/ 2500</span>
-                    </div>
-                </div>
-            </li>
-            <li class="cartao fundo-2">
-                <div class="carta-virada"></div>
-                <h2 class="nome">Nebuladragon, o Ser das Estrelas Eternas</h2>
-
-                <div class="nivel-carta">
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                    <span class="estrela"></span>
-                </div>
-
-                <img src="src/image/nebuladragon.png" alt="Nebuladragon, o Ser das Estrelas Eternas"
-                    class="imagem-carta">
-
-                <div class="informacoes">
-                    <p class="descricao">
-                        Uma criatura mítica nascida da fusão de nebulosas e energia estelar. Com suas escamas
-                        cristalinas, Nebuladragon canaliza o poder do cosmos, devastando seus inimigos com rajadas de
-                        energia pura. Diz-se que ele aparece apenas em momentos de caos universal, como arauto de
-                        renovação e equilíbrio celestial.
-                    </p>
-                    <div class="informacoes-ataque">
-                        <span>ATK/ 3200</span>
-                        <span>DEF/ 2000</span>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <button class="btn-seta btn-avancar" id="btn-avancar">
-            <img src="src/image/seta.png" alt="seta avancar">
-        </button>
-    </main>
-    <script src="src/script/script.js"></script>
+      // Redireciona
+      window.location.href = link;
+    }
+  </script>
 </body>
-
 </html>
